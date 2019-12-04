@@ -5,6 +5,15 @@ include 'class/db.php';
 
     $sql = "SELECT * FROM users";
     $userData = $db->select($sql);    
+
+
+
+// delete user data 
+    if (isset($_GET['delete'])) {
+        $id = $_GET['delete'];
+        $sql = "DELETE FROM users WHERE id='$id'";
+        $db->deleteData($sql);
+    }
 ?>
 
 
@@ -41,7 +50,7 @@ include 'class/db.php';
                                     </td>
                                 <td>
                                     <a href="register.php?edit=<?php echo $data['id']; ?>" class="  text-info ">edit</a> ||
-                                    <a class="  text-danger ">delete</a> || 
+                                    <a href="index.php?delete=<?php echo $data['id']; ?>" class="  text-danger ">delete</a> || 
                                     <a class="  text-success ">view</a>
                                 </td>
                             </tr>

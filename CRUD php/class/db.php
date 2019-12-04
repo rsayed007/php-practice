@@ -17,6 +17,15 @@ class DB{
             // echo "data base connected";
         }
     }
+
+    public function inserted($data){
+        
+        $result = $this->conn->query($data);
+        if ($result) {
+            echo 'data submitted';
+        }
+    }
+
     public function select($data){
         $result = $this->conn->query($data) or die();
         if ($result->num_rows > 0) {
@@ -25,19 +34,26 @@ class DB{
             return false;
         }
     }
-    public function inserted($data){
-        
-        $result = $this->conn->query($data);
-        if ($result) {
-            echo 'data submitted';
-        }
-    }
+
+    
     public function editData($edit){
         $result = $this->conn->query($edit);
         if ($result) {
             return $result;
         }else{
             return false;
+        }
+    }
+    public function updateData($data){
+        $result = $this->conn->query($data);
+        if ($result) {
+            header("Location: index.php");
+        }
+    }
+    public function deleteData($data){
+        $result = $this->conn->query($data);
+        if ($result) {
+            header("Location: index.php");
         }
     }
 }

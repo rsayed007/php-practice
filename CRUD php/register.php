@@ -2,6 +2,8 @@
     include 'class/db.php';
 
     $db = new DB();
+
+// insert data
     if (isset($_POST['register'])) {
         $userName = $_POST['name'];
         $email = $_POST['email'];
@@ -39,13 +41,25 @@
         $db->inserted($sql);
     
     }
-    // edit data
+// edit data
     if (isset($_GET['edit'])) {
         $id = $_GET['edit'];
         $sql= "SELECT * FROM users WHERE id=$id";
         $userData = $db->editData($sql)->fetch_assoc();
     }
 
+// update data
+
+    if (isset($_POST['update'])) {
+        print_r($_POST);
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $sql = "UPDATE users SET name='$name',email='$email',password='$password' WHERE id='$id'";
+        $db->updateData($sql);
+    }
 
 
 ?>
@@ -74,7 +88,7 @@
                         <div class="form-group">
                             <label for="name">Name:</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" value="<?php if(isset($_GET['edit'])) echo $userData['name'] ?>" >
-                            <input type=" hidden" class="form-control" id="id" name="id" value="<?php if(isset($_GET['edit'])) echo $userData['id'] ?>" >
+                            <input type="hidden" class="form-control" id="id" name="id" value="<?php if(isset($_GET['edit'])) echo $userData['id'] ?>" >
                         </div>
                         <div class="form-group">
                             <label for="email">Email:</label>
@@ -88,12 +102,11 @@
                             <label for="pwd">Password:</label>
                             <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
                         </div>
-                        <?php if(isset($_GET['edit'])){
-                                echo '<button type="submit" name="update" class="btn btn-info">Update</button>';
-                            }else{
-                                echo '<button type="submit" name="register" class="btn btn-success">Submit</button>';
-                            }
-                        ?>
+                        <?php if(isset($_GET['edit'])){ ?>
+                                <button type="submit" name="update" class="btn btn-info">Update</button>
+                         <?php   }else{ ?>
+                                <button type="submit" name="register" class="btn btn-success">Submit</button>
+                        <?php   }   ?>
                         
                     </form>
                 </div>
