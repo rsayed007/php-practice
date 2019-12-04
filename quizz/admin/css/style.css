@@ -1,0 +1,304 @@
+#nav-top{
+	border-radius: 0;
+	margin-bottom: 0;
+}
+.content-padding{
+padding: 0px;
+}
+.sticky-top{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1030;
+}
+
+.tableBacg{
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 10px;
+    background: #eafffc;
+}
+
+
+.top-main-div{
+	padding: 140px 35px 160px;
+	position: relative;
+	height: 700px;
+}
+#heading{
+	color: #000;
+	position: relative;
+
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border: 1px solid;
+}
+
+.alertLog{
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+.page_title{
+	float: right;
+}
+.breadcrumb{
+	background: #fff;
+	float: right;
+	padding-top: 20px;
+}
+.banner img{
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+
+.overlay1{
+	position: absolute;
+	top:10%;
+	padding-right:3%;
+	float: right;
+
+}
+.about-img{
+	border: 5px solid;
+}
+/*.overlay{
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 700px;
+}
+
+.section-heading {
+    text-transform: uppercase;
+    margin-bottom: 5%;
+    text-align: center;
+}*/
+.thumbnail{
+	border-radius: 0;
+}
+
+/**/
+#aboutus {
+    padding-top: 50px;
+    padding-bottom: 67px;
+    border: 1px solid;
+    margin-bottom: 30px;
+    margin-top: 30px;
+	background: #f1fdff;
+	border-radius: 10px;
+}
+.services {
+    background: #f3f3f3;
+    color: #333;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+.services p {
+    margin: 0 0 10px;
+    text-align: center;
+    text-transform: lowercase;
+}
+.service-img{
+		text-align: center;
+
+}
+.service-img img{
+	height: 100px;
+	margin-top: 50px;
+	border-radius: 40%; 
+
+}
+.service-img h2 {
+	text-align: center;
+	margin-bottom: 50px; 
+}
+
+
+.portfolio{
+	background: #333;
+	color:#fff;
+	padding-top: 50px;
+}
+.portfolio p{
+	text-transform: lowercase;
+	margin: 0 auto;
+	width: 50%;
+}
+.mix-buttons{
+	margin-bottom: 2%;
+}
+.control{
+	color: #000;
+	border-radius: 0;
+}
+#slider{
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 50px;
+    text-align: center;
+    background: #b2b2b2;
+    color: #fff;
+}
+#myCarousel{
+	color: #000;
+
+}
+.item{
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 150px;
+	
+
+}
+.item p{
+	text-align: center;
+	width: 700px;
+	margin: 0 auto;
+}
+.left.carousel-control{
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.0) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.right.carousel-control{
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0.0) 0%, rgba(0, 0, 0, .0001) 100%);
+}
+.contact-us{
+	padding-top: 50px; 
+}
+.container h2{
+	text-align: center;
+}
+.jumbotron {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 24px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+.h1 small {
+font-size: 24px;
+}
+
+.footer{
+	background-color: #444;
+	padding: 40px;
+	color: #fff;
+	margin-top: 100px;
+}
+.footer-inner p{
+	display: inline;
+}
+.footer-inner a{
+	color: #fff;
+	padding:10px;
+}
+.Quiz-list{
+	background: #89bbbf;
+	margin-top: 50px;
+
+}
+
+#qList {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#qList tr:hover {background-color: #ddd;}
+
+
+.container input {
+    position: absolute;
+/*    opacity: 0;
+*/    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+        cursor: pointer;
+
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+/* The container */
+.containerQ{
+	padding-left: 35px;
+    margin-bottom: 12px;
+}
+.container {
+    display: block;
+    position: relative;
+/*    padding-left: 35px;
+    margin-bottom: 12px;*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.time{
+	text-align: center;
+}
+
+.profile{
+	background: #e9e3e3;
+	padding: 25px;
+	margin-top: 60px;
+	margin-bottom: 130px;
+}
+.element {
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 50px;
+}
+.form-degine{
+	background: #CCFCFC;
+	border: 2px solid;
+	border-radius: 20px;
+}
